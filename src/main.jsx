@@ -5,6 +5,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Root from "./Components/Root/Root.jsx";
 import Home from "./Components/Home/Home";
 import DonationDetails from "./Components/DonationDetails";
+import AllDonation from "./Components/Donations/AllDonation";
 
 const router = createBrowserRouter([
     {
@@ -14,6 +15,11 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home />,
+            },
+            {
+                path: "/donations/",
+                element: <AllDonation />,
+                loader: () => fetch("../data.json"),
             },
             {
                 path: "/donation/:donationId",
