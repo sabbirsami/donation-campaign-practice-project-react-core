@@ -3,7 +3,7 @@ import logo from "../../Images/logo.png";
 
 const Header = () => {
     return (
-        <div>
+        <div className="">
             <div className="container mx-auto">
                 <div className="py-8 flex items-center justify-between">
                     <img className="w-52" src={logo} alt="" />
