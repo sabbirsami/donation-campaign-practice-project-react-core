@@ -1,5 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import Header from "./Header/Header";
+import { saveDonation } from "./addToLocalStorage";
 
 function DonationDetails() {
     const data = useLoaderData();
@@ -9,7 +10,9 @@ function DonationDetails() {
     const selectedDonation = data.find(
         (donation) => donation.id === parseFloat(donationId)
     );
-    console.log(selectedDonation);
+    const handleSaveDonation = (id) => {
+        saveDonation(id);
+    };
     return (
         <>
             <Header />
@@ -24,6 +27,7 @@ function DonationDetails() {
                         <div className="absolute bottom-0 bg-slate-900/30  py-6 px-6 w-full backdrop-brightness-75 rounded-b-2xl">
                             <button
                                 className="px-6  text-white rounded-lg py-3"
+                                onClick={() => handleSaveDonation(donationId)}
                                 style={{
                                     backgroundColor: `${selectedDonation.color}`,
                                 }}
