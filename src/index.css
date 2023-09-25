@@ -5,3 +5,7 @@
 * {
     font-family: "Inter", sans-serif;
 }
+a.active {
+    color: rgba(255, 68, 74, 1);
+    border-bottom: 2px solid rgba(255, 68, 74, 1);
+}

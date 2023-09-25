@@ -1,5 +1,11 @@
+import Home from "../Home/Home";
+
 const Root = () => {
-    return <div></div>;
+    return (
+        <>
+            <Home />
+        </>
+    );
 };
 
 export default Root;
