@@ -1,19 +1,15 @@
-import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import Donation from "./Donation";
 
-const Donations = () => {
-    const [donations, setDonations] = useState([]);
-    useEffect(() => {
-        fetch("data.json")
-            .then((res) => res.json())
-            .then((data) => setDonations(data));
-    }, []);
-    console.log(donations);
+Donation.propTypes = {
+    donations: PropTypes.object,
+};
+const Donations = (donations) => {
     return (
         <div>
             <div className="container mx-auto py-16">
                 <div className="grid grid-cols-4 gap-8">
-                    {donations.map((donation) => (
+                    {donations.donations.map((donation) => (
                         <Donation
                             key={donation.id}
                             donation={donation}
