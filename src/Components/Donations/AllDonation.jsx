@@ -11,7 +11,7 @@ const AllDonation = () => {
         <div>
             <Header />
             <div className="container mx-auto py-16">
-                <div className="grid grid-cols-2 gap-8">
+                <div className="grid lg:grid-cols-2 grid-cols-1 md:mx-4 mx-1 gap-8">
                     {donations.slice(0, showDataNumber).map((donation) => (
                         <DonationCard
                             key={donation.id}

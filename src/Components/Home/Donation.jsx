@@ -9,8 +9,8 @@ function Donation({ donation }) {
     const { id, bg_color, color, title, category, category_bg } = donation;
 
     return (
-        <div className="mb-4">
-            <NavLink to={`/donation/${id}`}>
+        <div className="mb-4 ">
+            <NavLink to={`/donation/${id}`} className="flex-row">
                 <div className="h-3/4">
                     <img
                         className="object-fit w-full h-full rounded-t-lg"
@@ -19,7 +19,7 @@ function Donation({ donation }) {
                     />
                 </div>
                 <div
-                    className="px-6  py-6 rounded-b-lg"
+                    className="px-6  py-6 rounded-b-lg "
                     style={{ backgroundColor: `${bg_color}` }}
                 >
                     <span
@@ -33,7 +33,7 @@ function Donation({ donation }) {
                     </span>
 
                     <h2
-                        className="text-2xl font-semibold mt-1"
+                        className="text-xl font-semibold mt-1  grow "
                         style={{ color: `${color}` }}
                     >
                         {title}
