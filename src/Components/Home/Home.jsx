@@ -32,7 +32,7 @@ const Home = () => {
                     <Banner setSearch={setSearch} />
                 </div>
             </div>
-            <Donations donations={donations} />
+            {/* <Donations donations={donations} /> */}
         </>
     );
 };
