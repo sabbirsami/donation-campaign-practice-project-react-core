@@ -9,17 +9,17 @@ const Banner = ({ setSearch }) => {
     };
     return (
         <div className="md:py-16 py-0">
-            <div className="container mx-auto text-center py-16">
-                <h2 className="font-bold text-4xl pt-6">
+            <div className="container mx-auto text-center md:py-16 py-5">
+                <h2 className="font-bold md:text-4xl text-3xl pt-6">
                     I Grow By Helping People In Need
                 </h2>
-                <div className=" py-6 mb-16">
+                <div className=" py-6 md:mb-16 mb-10 px-3 ">
                     <input
                         type="text"
                         name=""
                         id=""
                         ref={inputRef}
-                        className="border py-3 px-6 w-1/3 rounded-full"
+                        className="border py-3 px-6 md:w-1/3 w-full md:mb-0 mb-3 rounded-full"
                         placeholder="Search here...."
                     />
                     <button
