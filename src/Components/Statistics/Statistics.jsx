@@ -13,13 +13,13 @@ const Statistics = () => {
             <Header />
 
             <PieChart
-                width={600}
-                height={600}
+                width={300}
+                height={300}
                 className="mx-auto flex justify-center items-center"
             >
                 <Pie
                     data={data}
-                    cx={300}
+                    cx={150}
                     cy={200}
                     labelLine={false}
                     label={(80, 20)}
