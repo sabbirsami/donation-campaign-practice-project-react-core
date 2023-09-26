@@ -2,17 +2,32 @@ import { useLoaderData } from "react-router-dom";
 import Header from "../Header/Header";
 
 import DonationCard from "./DonationCard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { getStoredDonation } from "../addToLocalStorage";
 
 const AllDonation = () => {
     const donations = useLoaderData();
+
+    const [clickDonation, setClickDonation] = useState([]);
+
+    useEffect(() => {
+        const storedId = getStoredDonation();
+        console.log(storedId, donations);
+        if (donations.length > 0) {
+            const storedData = donations.filter((donation) =>
+                storedId.includes(donation.id)
+            );
+            console.log(storedData, donations, storedId);
+            setClickDonation(storedData);
+        }
+    }, [donations]);
     const [showDataNumber, setShowDataNumber] = useState(4);
     return (
         <div>
             <Header />
             <div className="container mx-auto py-16">
                 <div className="grid lg:grid-cols-2 grid-cols-1 md:mx-4 mx-1 gap-8">
-                    {donations.slice(0, showDataNumber).map((donation) => (
+                    {clickDonation.slice(0, showDataNumber).map((donation) => (
                         <DonationCard
                             key={donation.id}
                             donation={donation}

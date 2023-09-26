@@ -19,7 +19,7 @@ const Header = () => {
                         <ul
                             className={`${
                                 open ? "" : "hidden"
-                            } md:flex flex-row md:relative absolute md:ms-0 -ms-28 md:bg-transparent ease-in-out duration-300 bg-white p-10 gap-6`}
+                            } md:flex flex-row md:relative absolute md:ms-0 md:mt-0 -mt-4 -ms-28 md:bg-transparent ease-in-out duration-300 bg-white p-8 gap-6`}
                         >
                             <li>
                                 <NavLink to={"/"}>Home</NavLink>
