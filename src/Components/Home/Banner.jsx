@@ -1,9 +1,6 @@
 import { useRef } from "react";
 import PropTypes from "prop-types";
 
-Banner.propTypes = {
-    setSearch: PropTypes.func,
-};
 const Banner = ({ setSearch }) => {
     const inputRef = useRef(null);
 
@@ -36,5 +33,7 @@ const Banner = ({ setSearch }) => {
         </div>
     );
 };
-
+Banner.propTypes = {
+    setSearch: PropTypes.func,
+};
 export default Banner;

@@ -4,9 +4,7 @@ import { saveDonation } from "./addToLocalStorage";
 
 function DonationDetails() {
     const data = useLoaderData();
-    console.log(data);
     const { donationId } = useParams();
-
     const selectedDonation = data.find(
         (donation) => donation.id === parseFloat(donationId)
     );
@@ -21,7 +19,7 @@ function DonationDetails() {
                     <div className="relative">
                         <img
                             className="w-full object-cover rounded-xl"
-                            src={selectedDonation.img}
+                            src={selectedDonation.picture}
                             alt=""
                         />
                         <div className="absolute bottom-0 bg-slate-900/30  py-6 px-6 w-full backdrop-brightness-75 rounded-b-2xl">

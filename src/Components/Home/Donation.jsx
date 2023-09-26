@@ -14,7 +14,7 @@ function Donation({ donation }) {
                 <div className="h-3/4">
                     <img
                         className="object-fit w-full h-full rounded-t-lg"
-                        src={donation.img}
+                        src={donation.picture}
                         alt=""
                     />
                 </div>
