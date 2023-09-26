@@ -6,11 +6,13 @@ import Root from "./Components/Root/Root.jsx";
 import Home from "./Components/Home/Home";
 import DonationDetails from "./Components/DonationDetails";
 import AllDonation from "./Components/Donations/AllDonation";
+import ErrorComponent from "./Components/Error/ErrorComponent";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Root />,
+        errorElement: <ErrorComponent />,
         children: [
             {
                 path: "/",
